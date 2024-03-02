@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Editar Detalhes do Carro</h2>
+    <form method="POST">
+        <input type="text" name="marca" value="{{ carro.marca }}" placeholder="Marca" required><br>
+        <input type="text" name="modelo" value="{{ carro.modelo }}" placeholder="Modelo" required><br>
+        <input type="text" name="ano" value="{{ carro.ano }}" placeholder="Ano" required><br>
+        <input type="text" name="placa" value="{{ carro.placa }}" placeholder="Placa" required><br>
+        <input type="text" name="chassi" value="{{ carro.chassi }}" placeholder="Chassi" required><br>
+        <input type="text" name="cor" value="{{ carro.cor }}" placeholder="Cor" required><br>
+        <input type="text" name="combustivel" value="{{ carro.combustivel }}" placeholder="Combustível" required><br>
+        <button type="submit">Confirmar Edição</button>
+    </form>
+{% endblock %}
