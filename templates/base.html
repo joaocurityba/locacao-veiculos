@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Meu Sistema</title>
+    
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('cadastrar_carro') }}">Cadastrar Carro</a></li>
+            <li><a href="{{ url_for('cadastrar_cliente') }}">Cadastrar Cliente</a></li>
+            <li><a href="{{ url_for('ficha_locacao') }}">Ficha de Locação</a></li>
+
+        </ul>
+    </nav>
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

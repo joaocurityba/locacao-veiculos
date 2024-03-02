@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Ficha de Locação</h1>
+    <form action="{{ url_for('ficha_locacao') }}" method="POST" target="_blank">
+        <label for="cliente">Selecione um cliente:</label>
+        <select name="cliente" id="cliente">
+            {% for cliente in clientes %}
+                <option value="{{ cliente.id }}">{{ cliente.nome }}</option>
+            {% endfor %}
+        </select>
+        <br>
+        <label for="carro">Selecione um carro:</label>
+        <select name="carro" id="carro">
+            {% for carro in carros %}
+                <option value="{{ carro.id }}">{{ carro.marca }} {{ carro.modelo }}</option>
+            {% endfor %}
+        </select>
+        <br>
+        <input type="submit" value="Gerar PDF">
+    </form>
+{% endblock %}
